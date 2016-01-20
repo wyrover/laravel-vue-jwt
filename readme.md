@@ -354,7 +354,9 @@ npm install vue-router --save
 
 引用 vue.js 类库的 js 放在 `resources/assets/js` 下
 
-``` javascript main.js
+main.js
+
+``` javascript 
 var Vue = require('vue');
 
 import Greeter from './components/Greeter.vue';
