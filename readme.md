@@ -49,26 +49,34 @@ php artisan app:name LarVue
 
 ## 3. 更新前端库
 
+```
 type nul> .bowerrc
-编辑 .bowerrc 文件
+```
 
+编辑 .bowerrc 文件
+``` javascript
 {
     "directory": "resources/assets/vendor"
 }
+```
 
+```
 type nul> bower.json
+```
 
 编辑 bower.json 文件
-
+``` javascript
 {
     "name": "AppName",
     "dependencies": {
       "bootstrap-sass": "~3.3.5"
     }
 }
+```
 
+```
 bower install bootstrap-sass --save
-
+```
 
 
 ## 4. npm 安装库
