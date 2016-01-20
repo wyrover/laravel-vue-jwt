@@ -88,6 +88,12 @@ bower install bootstrap-sass --save
 npm install
 ```
 
+如果是 windows 系统，执行
+
+```
+npm install --no-bin-links
+```
+
 这步很无聊，从其他项目软链接一份
 
 ```
@@ -151,6 +157,7 @@ php artisan serve --port 9096
 
 ## 10. 准备几个命令准备拷贝粘贴
 
+-  `php artisan key:generate`
 -  `php artisan migrate`
 -  `php artisan db:seed`
 -  `php artisan route:list`
@@ -341,9 +348,28 @@ echo.
 
 ## 11. 准备 vue.js
 
-npm install laravel-elixir --save-dev
+npm install laravel-elixir-vueify --save-dev
 npm install vue --save
 npm install vue-router --save
+
+引用 vue.js 类库的 js 放在 `resources/assets/js` 下
+
+``` javascript main.js
+var Vue = require('vue');
+
+import Greeter from './components/Greeter.vue';
+
+new Vue({
+    el: '#app',
+
+    components: { Greeter },
+
+    ready() {
+        alert('Vue and Vueify all set to go!');
+    }
+});
+```
+
 
 
 ## 12. 再次修改 gulpfile.js
