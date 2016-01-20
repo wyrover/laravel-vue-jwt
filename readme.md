@@ -2,9 +2,45 @@
 
 ## 1. 安装 laravel 框架
 
-composer create-project laravel/laravel laravel-login
+先设置 composer 中国区镜像
+
+composer config -g repo.packagist composer http://packagist.phpcomposer.com
+
+更新下 `composer selfupdate`
+
+新建项目
+
+composer create-project laravel/laravel laravel-vue-jwt
 
 如果是从 github 拉下来的，使用 `composer install --prefer-dist` 更新库
+
+添加表单支持库和调试支持库
+
+```
+composer require laravelcollective/html
+composer require barryvdh/laravel-debugbar
+```
+
+需要配置 config/app.php 
+
+providers 部分
+
+```
+Collective\Html\HtmlServiceProvider::class,
+Barryvdh\Debugbar\ServiceProvider::class,
+```
+
+aliases 部分
+
+```
+'Form'      => Collective\Html\FormFacade::class,
+'Html'      => Collective\Html\HtmlFacade::class,
+'Debugbar'  => Barryvdh\Debugbar\Facade::class,
+```
+
+
+
+
 
 ## 2. 修改工程命名空间
 
@@ -93,14 +129,20 @@ php artisan serve --port 9096
 
 http://localhost:9096/
 
-
-## 7. 准备 vue.js
-
-
 ## 8. 定义 layout
 
 -  base_layout.blade.php   基本 layout
 -  home.blade.php           主页
+
+
+
+修改路由，查看 home.blade.php 的输出结果
+
+
+## 7. 准备 vue.js
+
+
+
 
 
 ## 9. 定义 routes
