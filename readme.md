@@ -348,9 +348,15 @@ echo.
 
 ## 11. 准备 vue.js
 
-npm install laravel-elixir-vueify --save-dev
-npm install vue --save
-npm install vue-router --save
+```
+npm install laravel-elixir-vueify --save
+
+npm install babel-core babel-plugin-transform-runtime babel-preset-es2015 babel-preset-react babel-runtime --save
+
+npm install moment --save
+npm install vue vue-router vue-resource vue-hot-reload-api --save
+npm install vueify vueify-insert-css --save
+```
 
 引用 vue.js 类库的 js 放在 `resources/assets/js` 下
 
