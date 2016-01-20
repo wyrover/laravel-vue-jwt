@@ -149,10 +149,7 @@ php artisan serve --port 9096
 刷新页面
 
 
-## 10. 准备 vue.js
-
-
-## 11. 准备几个命令准备拷贝粘贴
+## 10. 准备几个命令准备拷贝粘贴
 
 -  `php artisan migrate`
 -  `php artisan db:seed`
@@ -339,6 +336,45 @@ start laravel-tools.bat 111
 
 :exit
 echo.
+```
+
+
+## 11. 准备 vue.js
+
+npm install laravel-elixir --save-dev
+npm install vue --save
+npm install vue-router --save
+
+
+## 12. 再次修改 gulpfile.js
+
+```
+var elixir = require('laravel-elixir');
+require('laravel-elixir-vueify');
+
+/*
+ |--------------------------------------------------------------------------
+ | Elixir Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Elixir provides a clean, fluent API for defining some basic Gulp tasks
+ | for your Laravel application. By default, we are compiling the Sass
+ | file for our application, as well as publishing vendor resources.
+ |
+ */
+
+elixir(function(mix) {
+    var bpath = 'resources/assets/vendor/bootstrap-sass/assets';
+    var jqueryPath = 'resources/assets/vendor/jquery';
+    mix.sass('app.scss', 'public/assets/css')
+        .copy(jqueryPath + '/dist/jquery.min.js', 'public/assets/js')
+        .copy(bpath + '/fonts', 'public/assets/fonts')
+        .copy(bpath + '/javascripts/bootstrap.min.js', 'public/assets/js');
+    
+    mix.browserify('main.js');
+
+});
+
 ```
 
 
