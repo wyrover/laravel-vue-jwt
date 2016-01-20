@@ -94,7 +94,7 @@ npm install
 mklink /d /j "H:\rover\rover-self-work\php\laravel-vue-jwt\laravel-vue-jwt\node_modules" "H:\rover\rover-self-work\php\laravel-login\laravel-login\node_modules" 
 ```
 
-## 4. 修改 gulpfile.js
+## 5. 修改 gulpfile.js
 
 ``` javascript
 var elixir = require('laravel-elixir');
@@ -121,40 +121,40 @@ elixir(function(mix) {
 
 ```
 
-## 5. 修改 bootstrap 编译文件 \resources\assets\sass\app.scss
+## 6. 修改 bootstrap 编译文件 \resources\assets\sass\app.scss
 
 ```
 @import "resources/assets/vendor/bootstrap-sass/assets/stylesheets/bootstrap"; 
 ```
-## 6. 编译前端库
+## 7. 编译前端库
 
 执行 `gulp`
 
 
-## 7. 先启动 laravel 看一下
+## 8. 先启动 laravel 看一下
 
 php artisan serve --port 9096
 
-http://localhost:9096/
+[http://localhost:9096/](http://localhost:9096/)
 
-## 8. 定义 layout
+## 9. 定义 layout
 
--  base_layout.blade.php   基本 layout
+-  _base_layout.blade.php   基本 layout
 -  home.blade.php           主页
 
 
 
 修改路由，查看 home.blade.php 的输出结果
 
-
-## 7. 准备 vue.js
-
+刷新页面
 
 
+## 10. 准备 vue.js
 
 
-## 9. 定义 routes
+
+## 11. 定义 routes
 
 
-## 10. 定义 controller
+## 12. 定义 controller
 
