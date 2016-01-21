@@ -446,3 +446,11 @@ elixir(function(mix) {
 
 ## 12. 定义 controller
 
+
+
+## other
+
+github 上的 vue.js SPA 例子，使用 laravel 做后端，vue.js 做前端，JWT 认证，跨域访问
+
+-  https://github.com/layer7be/vue-starter-laravel-api
+-  https://github.com/layer7be/vue-starter

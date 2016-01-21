@@ -11,8 +11,10 @@
     "babel-runtime": "^5.8.34",
     "laravel-elixir": "^4.0.0",
     "laravel-elixir-vueify": "^1.0.2",
+    "moment": "^2.11.1",
     "vue": "^1.0.15",
     "vue-hot-reload-api": "^1.2.2",
+    "vue-resource": "^0.6.1",
     "vue-router": "^0.7.9",
     "vueify": "^8.3.2",
     "vueify-insert-css": "^1.0.0"
